@@ -83,7 +83,7 @@
 
         /* Frosted glass with cross-browser support */
         .frosted-glass {
-            background: rgba(0, 0, 0, 0.85);
+            background: #000000;
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             -moz-backdrop-filter: blur(20px);
@@ -280,54 +280,45 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden pt-14 sm:pt-16">
-        <!-- Subtle Background Pattern -->
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.4&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="company_interior.png" alt="Innovative Engineers Factory" class="w-full h-full object-cover">
+            <!-- Translucent Dark Grey Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-900/85 via-slate-900/80 to-slate-900/90"></div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 py-12 sm:py-0">
-            <!-- Location Badge -->
-            <div class="inline-flex items-center space-x-1.5 sm:space-x-2 text-slate-400 text-xs sm:text-sm tracking-widest uppercase mb-6 sm:mb-8 animate__animated animate__fadeInDown">
-                <span>Vadodara</span>
-                <span class="w-1 h-1 bg-slate-500 rounded-full"></span>
-                <span>Gujarat</span>
-                <span class="w-1 h-1 bg-slate-500 rounded-full"></span>
-                <span>India</span>
-            </div>
-
-            <!-- Main Headline -->
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white tracking-tight mb-4 sm:mb-6 animate__animated animate__fadeInUp">
-                Innovative<br/>
-                <span class="text-gradient">Engineers</span>
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-12 sm:py-16">
+            <p class="text-gold font-semibold tracking-widest uppercase text-xs sm:text-sm mb-3 sm:mb-4">
+                Vadodara &bull; Gujarat &bull; India
+            </p>
+            <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight mb-4 sm:mb-6 leading-tight">
+                Innovative<br>Engineers
             </h1>
-
-            <!-- Tagline -->
-            <p class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-slate-300 mb-6 sm:mb-8 lg:mb-12 animate__animated animate__fadeInUp animate__delay-1s px-4">
+            <p class="text-xl sm:text-2xl md:text-3xl text-slate-200 font-medium mb-3 sm:mb-4 max-w-3xl mx-auto">
                 Serving the Transformer Industry Since 1996
             </p>
-
-            <!-- Subtitle -->
-            <p class="text-base sm:text-lg md:text-xl text-slate-400 font-light max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16 animate__animated animate__fadeInUp animate__delay-1s px-4">
+            <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-8 sm:mb-10">
                 Manufacturers of Transformer Radiators
             </p>
 
             <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 animate__animated animate__fadeInUp animate__delay-1s px-4">
-                <a href="#products" class="w-full sm:w-auto bg-gold hover:bg-yellow-600 text-charcoal px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all shadow-lg hover:shadow-xl text-center touch-target">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <a href="#products" class="w-full sm:w-auto bg-gold hover:bg-yellow-500 text-charcoal font-bold px-8 py-3.5 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base">
                     Explore Products
                 </a>
-                <a href="#contact" class="w-full sm:w-auto border border-slate-500 text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-slate-800 transition-all text-center touch-target">
+                <a href="#contact" class="w-full sm:w-auto border-2 border-white/40 hover:border-white text-white font-semibold px-8 py-3.5 rounded-full transition-all duration-300 backdrop-blur-sm hover:bg-white/10 text-sm sm:text-base">
                     Get a Quote
                 </a>
             </div>
         </div>
 
         <!-- Scroll Indicator -->
-        <div class="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate__animated animate__fadeInUp animate__delay-2s">
-            <div class="w-5 h-8 sm:w-6 sm:h-10 border-2 border-slate-500 rounded-full flex justify-center">
-                <div class="w-1 h-2.5 sm:h-3 bg-slate-400 rounded-full mt-1.5 sm:mt-2 animate-bounce"></div>
-            </div>
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden sm:block">
+            <a href="#about" class="block w-6 h-10 border-2 border-slate-400/60 rounded-full p-1 hover:border-gold transition-colors">
+                <div class="w-1.5 h-3 bg-slate-300 rounded-full mx-auto animate-bounce"></div>
+            </a>
         </div>
     </section>
 
@@ -344,7 +335,8 @@
 
                 <div class="max-w-4xl mx-auto">
                     <p class="text-lg sm:text-xl text-slate-600 leading-relaxed text-center mb-8 sm:mb-10 lg:mb-12 px-4">
-                        <strong>Innovative Engineers</strong> is a premier manufacturer of high-performance transformer radiators based in Vadodara. We design and deliver custom cooling solutions for power and distribution applications, engineered precisely to your technical requirements and global industry standards.                    </p>
+                        <strong>Innovative Engineers</strong> is a premier manufacturer of high-performance transformer radiators based in Vadodara[cite: 14]. We design and deliver custom cooling solutions for power and distribution applications, engineered precisely to your technical requirements and global industry standards.
+                    </p>
 
                     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4 lg:gap-6 mt-8 sm:mt-10 lg:mt-12">
                         <div class="text-center p-4 sm:p-5 lg:p-6 bg-sand rounded-xl sm:rounded-2xl border border-steel/20">
@@ -518,7 +510,7 @@
                     <div class="bg-sand/50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 xl:p-12 min-h-[350px] sm:min-h-[400px] border border-steel/10">
                         <!-- Power Transformers -->
                         <div x-show="activeProductTab === 'power'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0" class="tab-content-enter">
-                            <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
+                            <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
                                 <div>
                                     <h3 class="text-xl sm:text-2xl font-bold text-charcoal mb-3 sm:mb-4">Power Transformer Radiators</h3>
                                     <p class="text-sm sm:text-base text-slate-600 mb-6 sm:mb-8">
@@ -545,49 +537,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-steel/10">
-                                    <h4 class="font-semibold text-charcoal mb-3 sm:mb-4 text-sm sm:text-base">Customization Options</h4>
-                                    <div class="grid grid-cols-2 gap-2 sm:gap-3 text-xs sm:text-sm">
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full flex-shrink-0"></span>
-                                            <span>Radiator size</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full flex-shrink-0"></span>
-                                            <span>Number of elements</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full flex-shrink-0"></span>
-                                            <span>Element arrangement</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full flex-shrink-0"></span>
-                                            <span>Header arrangement</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full flex-shrink-0"></span>
-                                            <span>Flange dimensions</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full flex-shrink-0"></span>
-                                            <span>Mounting requirements</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full flex-shrink-0"></span>
-                                            <span>Bracing and support</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full flex-shrink-0"></span>
-                                            <span>Customer-specific designs</span>
-                                        </div>
-                                    </div>
+                                <div class="bg-white rounded-xl sm:rounded-2xl p-4 border border-steel/10 shadow-sm flex items-center justify-center h-64 sm:h-80">
+                                    <img src="power_radiator.png" alt="Power Transformer Radiator" class="max-h-full max-w-full object-contain rounded-lg">
                                 </div>
                             </div>
                         </div>
 
                         <!-- Distribution Transformers -->
                         <div x-show="activeProductTab === 'distribution'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0" class="tab-content-enter">
-                            <div class="grid lg:grid-cols-2 gap-12">
+                            <div class="grid lg:grid-cols-2 gap-12 items-center">
                                 <div>
                                     <h3 class="text-2xl font-bold text-charcoal mb-4">Distribution Transformer Radiators</h3>
                                     <p class="text-slate-600 mb-8">
@@ -614,49 +572,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="bg-white rounded-2xl p-6 border border-steel/10">
-                                    <h4 class="font-semibold text-charcoal mb-4">Customization Options</h4>
-                                    <div class="grid grid-cols-2 gap-3 text-sm">
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Radiator size</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Number of elements</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Element arrangement</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Header arrangement</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Flange dimensions</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Mounting requirements</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Bracing and support</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Customer-specific designs</span>
-                                        </div>
-                                    </div>
+                                <div class="bg-white rounded-xl sm:rounded-2xl p-4 border border-steel/10 shadow-sm flex items-center justify-center h-64 sm:h-80">
+                                    <img src="distribution_radiator.png" alt="Distribution Transformer Radiator" class="max-h-full max-w-full object-contain rounded-lg">
                                 </div>
                             </div>
                         </div>
 
                         <!-- Furnace Transformers -->
                         <div x-show="activeProductTab === 'furnace'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0" class="tab-content-enter">
-                            <div class="grid lg:grid-cols-2 gap-12">
+                            <div class="grid lg:grid-cols-2 gap-12 items-center">
                                 <div>
                                     <h3 class="text-2xl font-bold text-charcoal mb-4">Furnace Transformer Radiators</h3>
                                     <p class="text-slate-600 mb-8">
@@ -683,49 +607,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="bg-white rounded-2xl p-6 border border-steel/10">
-                                    <h4 class="font-semibold text-charcoal mb-4">Customization Options</h4>
-                                    <div class="grid grid-cols-2 gap-3 text-sm">
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Radiator size</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Number of elements</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Element arrangement</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Header arrangement</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Flange dimensions</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Mounting requirements</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Bracing and support</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Customer-specific designs</span>
-                                        </div>
-                                    </div>
+                                <div class="bg-white rounded-xl sm:rounded-2xl p-4 border border-steel/10 shadow-sm flex items-center justify-center h-64 sm:h-80">
+                                    <img src="furnace_radiator.png" alt="Furnace Transformer Radiator" class="max-h-full max-w-full object-contain rounded-lg">
                                 </div>
                             </div>
                         </div>
 
                         <!-- Special Purpose -->
                         <div x-show="activeProductTab === 'special'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0" class="tab-content-enter">
-                            <div class="grid lg:grid-cols-2 gap-12">
+                            <div class="grid lg:grid-cols-2 gap-12 items-center">
                                 <div>
                                     <h3 class="text-2xl font-bold text-charcoal mb-4">Special Purpose Transformer Radiators</h3>
                                     <p class="text-slate-600 mb-8">
@@ -752,49 +642,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="bg-white rounded-2xl p-6 border border-steel/10">
-                                    <h4 class="font-semibold text-charcoal mb-4">Customization Options</h4>
-                                    <div class="grid grid-cols-2 gap-3 text-sm">
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Radiator size</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Number of elements</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Element arrangement</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Header arrangement</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Flange dimensions</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Mounting requirements</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Bracing and support</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Customer-specific designs</span>
-                                        </div>
-                                    </div>
+                                <div class="bg-white rounded-xl sm:rounded-2xl p-4 border border-steel/10 shadow-sm flex items-center justify-center h-64 sm:h-80">
+                                    <img src="swan_neck.png" alt="Special Purpose Radiator" class="max-h-full max-w-full object-contain rounded-lg">
                                 </div>
                             </div>
                         </div>
 
                         <!-- Custom Radiators -->
                         <div x-show="activeProductTab === 'custom'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0" class="tab-content-enter">
-                            <div class="grid lg:grid-cols-2 gap-12">
+                            <div class="grid lg:grid-cols-2 gap-12 items-center">
                                 <div>
                                     <h3 class="text-2xl font-bold text-charcoal mb-4">Customized Transformer Radiators</h3>
                                     <p class="text-slate-600 mb-8">
@@ -821,42 +677,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="bg-white rounded-2xl p-6 border border-steel/10">
-                                    <h4 class="font-semibold text-charcoal mb-4">Customization Options</h4>
-                                    <div class="grid grid-cols-2 gap-3 text-sm">
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Radiator size</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Number of elements</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Element arrangement</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Header arrangement</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Flange dimensions</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Mounting requirements</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Bracing and support</span>
-                                        </div>
-                                        <div class="flex items-center space-x-2 text-slate-600">
-                                            <span class="w-2 h-2 bg-gold rounded-full"></span>
-                                            <span>Customer-specific designs</span>
-                                        </div>
-                                    </div>
+                                <div class="bg-white rounded-xl sm:rounded-2xl p-4 border border-steel/10 shadow-sm flex items-center justify-center h-64 sm:h-80">
+                                    <img src="custom_radiator.png" alt="Customized Transformer Radiator" class="max-h-full max-w-full object-contain rounded-lg">
                                 </div>
                             </div>
                         </div>
@@ -992,93 +814,92 @@
 
                 <div class="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 max-w-6xl mx-auto">
                     <!-- Contact Form -->
-                    <!-- Contact Form -->
-<!-- Contact Form -->
-<div class="bg-sand/50 rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 border border-steel/20">
-    <h3 class="text-xl sm:text-2xl font-bold text-charcoal mb-5 sm:mb-6">Request a Quote</h3>
-    
-    <form class="space-y-4 sm:space-y-5" 
-          x-data="{ 
-              formData: { name: '', email: '', phone: '', company: '', message: '' }, 
-              submitted: false,
-              loading: false,
-              async submitForm() {
-                  this.loading = true;
-                  // PASTE YOUR GOOGLE SCRIPT WEB APP URL BELOW
-                  const scriptUrl = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
-                  
-                  // Convert form data object to URL-encoded format
-                  const payload = new URLSearchParams(this.formData);
+                    <div class="bg-sand/50 rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 border border-steel/20">
+                        <h3 class="text-xl sm:text-2xl font-bold text-charcoal mb-5 sm:mb-6">Request a Quote</h3>
+                        
+                        <form class="space-y-4 sm:space-y-5" 
+                              x-data="{ 
+                                  formData: { name: '', email: '', phone: '', company: '', message: '' }, 
+                                  submitted: false,
+                                  loading: false,
+                                  async submitForm() {
+                                      this.loading = true;
+                                      // PASTE YOUR GOOGLE SCRIPT WEB APP URL BELOW
+                                      const scriptUrl = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+                                      
+                                      // Convert form data object to URL-encoded format
+                                      const payload = new URLSearchParams(this.formData);
 
-                  try {
-                      await fetch(scriptUrl, {
-                          method: 'POST',
-                          mode: 'no-cors',
-                          headers: {
-                              'Content-Type': 'application/x-www-form-urlencoded'
-                          },
-                          body: payload.toString()
-                      });
+                                      try {
+                                          await fetch(scriptUrl, {
+                                              method: 'POST',
+                                              mode: 'no-cors',
+                                              headers: {
+                                                  'Content-Type': 'application/x-www-form-urlencoded'
+                                              },
+                                              body: payload.toString()
+                                          });
 
-                      alert('Inquiry has been sent');
-                      this.submitted = true;
-                      this.formData = { name: '', email: '', phone: '', company: '', message: '' };
-                  } catch (error) {
-                      alert('There was an issue sending your inquiry. Please try again.');
-                  } finally {
-                      this.loading = false;
-                  }
-              }
-          }" 
-          @submit.prevent="submitForm()">
-        
-        <div class="grid sm:grid-cols-2 gap-4 sm:gap-5">
-            <div>
-                <label class="block text-xs sm:text-sm font-medium text-slate-700 mb-1.5 sm:mb-2">Full Name</label>
-                <input type="text" x-model="formData.name" required class="input-field w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-steel/30 focus:border-gold focus:outline-none bg-white text-sm sm:text-base" placeholder="Your name">
-            </div>
-            <div>
-                <label class="block text-xs sm:text-sm font-medium text-slate-700 mb-1.5 sm:mb-2">Email</label>
-                <input type="email" x-model="formData.email" required class="input-field w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-steel/30 focus:border-gold focus:outline-none bg-white text-sm sm:text-base" placeholder="your@email.com">
-            </div>
-        </div>
-        
-        <div class="grid sm:grid-cols-2 gap-4 sm:gap-5">
-            <div>
-                <label class="block text-xs sm:text-sm font-medium text-slate-700 mb-1.5 sm:mb-2">Phone</label>
-                <input type="tel" x-model="formData.phone" class="input-field w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-steel/30 focus:border-gold focus:outline-none bg-white text-sm sm:text-base" placeholder="+91 XXXXX XXXXX">
-            </div>
-            <div>
-                <label class="block text-xs sm:text-sm font-medium text-slate-700 mb-1.5 sm:mb-2">Company</label>
-                <input type="text" x-model="formData.company" class="input-field w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-steel/30 focus:border-gold focus:outline-none bg-white text-sm sm:text-base" placeholder="Company name">
-            </div>
-        </div>
-        
-        <div>
-            <label class="block text-xs sm:text-sm font-medium text-slate-700 mb-1.5 sm:mb-2">Message</label>
-            <textarea x-model="formData.message" rows="4" required class="input-field w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-steel/30 focus:border-gold focus:outline-none resize-none bg-white text-sm sm:text-base" placeholder="Tell us about your requirements..."></textarea>
-        </div>
-        
-        <button type="submit" 
-                :disabled="loading" 
-                class="w-full bg-gold hover:bg-yellow-600 disabled:opacity-50 text-charcoal font-semibold py-3 sm:py-4 rounded-lg sm:rounded-xl transition-colors text-sm sm:text-base touch-target">
-            <span x-show="!loading">Send Inquiry</span>
-            <span x-show="loading">Sending...</span>
-        </button>
+                                          alert('Inquiry has been sent');
+                                          this.submitted = true;
+                                          this.formData = { name: '', email: '', phone: '', company: '', message: '' };
+                                      } catch (error) {
+                                          alert('There was an issue sending your inquiry. Please try again.');
+                                      } finally {
+                                          this.loading = false;
+                                      }
+                                  }
+                              }" 
+                              @submit.prevent="submitForm()">
+                            
+                            <div class="grid sm:grid-cols-2 gap-4 sm:gap-5">
+                                <div>
+                                    <label class="block text-xs sm:text-sm font-medium text-slate-700 mb-1.5 sm:mb-2">Full Name</label>
+                                    <input type="text" x-model="formData.name" required class="input-field w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-steel/30 focus:border-gold focus:outline-none bg-white text-sm sm:text-base" placeholder="Your name">
+                                </div>
+                                <div>
+                                    <label class="block text-xs sm:text-sm font-medium text-slate-700 mb-1.5 sm:mb-2">Email</label>
+                                    <input type="email" x-model="formData.email" required class="input-field w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-steel/30 focus:border-gold focus:outline-none bg-white text-sm sm:text-base" placeholder="your@email.com">
+                                </div>
+                            </div>
+                            
+                            <div class="grid sm:grid-cols-2 gap-4 sm:gap-5">
+                                <div>
+                                    <label class="block text-xs sm:text-sm font-medium text-slate-700 mb-1.5 sm:mb-2">Phone</label>
+                                    <input type="tel" x-model="formData.phone" class="input-field w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-steel/30 focus:border-gold focus:outline-none bg-white text-sm sm:text-base" placeholder="+91 XXXXX XXXXX">
+                                </div>
+                                <div>
+                                    <label class="block text-xs sm:text-sm font-medium text-slate-700 mb-1.5 sm:mb-2">Company</label>
+                                    <input type="text" x-model="formData.company" class="input-field w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-steel/30 focus:border-gold focus:outline-none bg-white text-sm sm:text-base" placeholder="Company name">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-xs sm:text-sm font-medium text-slate-700 mb-1.5 sm:mb-2">Message</label>
+                                <textarea x-model="formData.message" rows="4" required class="input-field w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-steel/30 focus:border-gold focus:outline-none resize-none bg-white text-sm sm:text-base" placeholder="Tell us about your requirements..."></textarea>
+                            </div>
+                            
+                            <button type="submit" 
+                                    :disabled="loading" 
+                                    class="w-full bg-gold hover:bg-yellow-600 disabled:opacity-50 text-charcoal font-semibold py-3 sm:py-4 rounded-lg sm:rounded-xl transition-colors text-sm sm:text-base touch-target">
+                                <span x-show="!loading">Send Inquiry</span>
+                                <span x-show="loading">Sending...</span>
+                            </button>
 
-        <!-- Inline Success Notification -->
-        <div x-show="submitted" x-transition class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg sm:rounded-xl mt-4 text-sm">
-            Thank you for your inquiry! We have received your message and will get back to you shortly.
-        </div>
-    </form>
-</div>
+                            <!-- Inline Success Notification -->
+                            <div x-show="submitted" x-transition class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg sm:rounded-xl mt-4 text-sm">
+                                Thank you for your inquiry! We have received your message and will get back to you shortly.
+                            </div>
+                        </form>
+                    </div>
+
                     <!-- Contact Details -->
                     <div class="space-y-4 sm:space-y-6 lg:space-y-8">
                         <!-- Contact Person 1 -->
                         <div class="bg-sand/50 rounded-xl sm:rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 border border-steel/20">
                             <div class="flex items-start space-x-3 sm:space-x-4">
-                                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
-                                    <span class="text-charcoal font-bold text-base sm:text-lg">NP</span>
+                                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-charcoal rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="text-gold font-bold text-base sm:text-lg">NP</span>
                                 </div>
                                 <div>
                                     <h4 class="text-lg sm:text-xl font-bold text-charcoal">Nitin Patel</h4>
@@ -1096,8 +917,8 @@
                         <!-- Contact Person 2 -->
                         <div class="bg-sand/50 rounded-xl sm:rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 border border-steel/20">
                             <div class="flex items-start space-x-3 sm:space-x-4">
-                                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-steel rounded-full flex items-center justify-center flex-shrink-0">
-                                    <span class="text-white font-bold text-base sm:text-lg">JP</span>
+                                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-charcoal rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="text-gold font-bold text-base sm:text-lg">JP</span>
                                 </div>
                                 <div>
                                     <h4 class="text-lg sm:text-xl font-bold text-charcoal">Jeel Patel</h4>
@@ -1112,7 +933,7 @@
                             </div>
                         </div>
 
-                        <!-- Email -->
+                        <!-- Email Us -->
                         <div class="bg-sand/50 rounded-xl sm:rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 border border-steel/20">
                             <div class="flex items-start space-x-3 sm:space-x-4">
                                 <div class="w-12 h-12 sm:w-14 sm:h-14 bg-charcoal rounded-full flex items-center justify-center flex-shrink-0">
@@ -1129,11 +950,11 @@
                             </div>
                         </div>
 
-                        <!-- Address -->
+                        <!-- Our Location -->
                         <div class="bg-sand/50 rounded-xl sm:rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 border border-steel/20">
                             <div class="flex items-start space-x-3 sm:space-x-4">
-                                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-5 h-5 sm:w-6 sm:h-6 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-charcoal rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 sm:w-6 sm:h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                                     </svg>
@@ -1156,11 +977,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black text-white py-16 border-t-4 border-gold">
-
-            <div class="border-t border-steel pt-8 text-center text-slate-400 text-sm">
-                <p>&copy; 2024 Innovative Engineers. All rights reserved. | Vadodara, Gujarat, India</p>
-            </div>
+    <footer class="bg-charcoal text-white py-4 border-t-2 border-gold">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-400 text-xs sm:text-sm">
+            <p>&copy; 2026 Innovative Engineers. All rights reserved. | Vadodara, Gujarat, India</p>
+        </div>
     </footer>
 
     <!-- Scroll Reveal Script -->
