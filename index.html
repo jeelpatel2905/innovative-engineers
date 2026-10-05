@@ -823,32 +823,28 @@
                                   submitted: false,
                                   loading: false,
                                   async submitForm() {
-                                      this.loading = true;
-                                      // PASTE YOUR GOOGLE SCRIPT WEB APP URL BELOW
-                                      const scriptUrl = 'https://script.google.com/macros/s/AKfycbx2c2_dryE18rzYUaYovHtMVUlXbhYCISBjT8ZXLzkIPJ4FWOeRysqf39rfvMFm06inSQ/exec';
-                                      
-                                      // Convert form data object to URL-encoded format
-                                      const payload = new URLSearchParams(this.formData);
+    this.loading = true;
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbx2c2_dryE18rzYUaYovHtMVUlXbhYCISBjT8ZXLzkIPJ4FWOeRysqf39rfvMFm06inSQ/exec';
 
-                                      try {
-                                          await fetch(scriptUrl, {
-                                              method: 'POST',
-                                              mode: 'no-cors',
-                                              headers: {
-                                                  'Content-Type': 'application/x-www-form-urlencoded'
-                                              },
-                                              body: payload.toString()
-                                          });
+    try {
+        await fetch(scriptUrl, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'text/plain'
+            },
+            body: JSON.stringify(this.formData)
+        });
 
-                                          alert('Inquiry has been sent');
-                                          this.submitted = true;
-                                          this.formData = { name: '', email: '', phone: '', company: '', message: '' };
-                                      } catch (error) {
-                                          alert('There was an issue sending your inquiry. Please try again.');
-                                      } finally {
-                                          this.loading = false;
-                                      }
-                                  }
+        alert('Inquiry has been sent');
+        this.submitted = true;
+        this.formData = { name: '', email: '', phone: '', company: '', message: '' };
+    } catch (error) {
+        alert('There was an issue sending your inquiry. Please try again.');
+    } finally {
+        this.loading = false;
+    }
+}
                               }" 
                               @submit.prevent="submitForm()">
                             
